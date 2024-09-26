@@ -7,6 +7,26 @@ void ShapeCollection::addCircle(Circle circle) {
     circles.push_back(circle);
 }
 
+void ShapeCollection::addRectangle(Rectangle rectangle) {
+    rectangles.push_back(rectangle);
+}
+
+void ShapeCollection::addTriangle(Triangle triangle) {
+    triangles.push_back(triangle);
+}
+
+void ShapeCollection::addSquare(Square square) {
+    squares.push_back(square);
+}
+
+void ShapeCollection::addEquilateralTriangle(EquilateralTriangle equilateralTriangle) {
+    equilateralTriangles.push_back(equilateralTriangle);
+}
+
+void ShapeCollection::addRegularPentagon(RegularPentagon regularPentagon) {
+    regularPentagons.push_back(regularPentagon);
+}
+
 std::string ShapeCollection::getShapesTable() {
     string table = "";
 

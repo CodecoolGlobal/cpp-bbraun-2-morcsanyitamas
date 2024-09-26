@@ -11,8 +11,11 @@ double Triangle::calculatePerimeter() {
     return a + b + c;
 }
 
-Triangle::Triangle(double a, double  b, double  c): a(a), b(b), c(c) {
-    semiPerimeter = 0.5 * (a + b + c);
+Triangle::Triangle(double a, double  b, double  c) {
+    Triangle::a = a;
+    Triangle::b = b;
+    Triangle::c = c;
+    semiPerimeter = 0.5 * calculatePerimeter();
 }
 
 string Triangle::toString(){

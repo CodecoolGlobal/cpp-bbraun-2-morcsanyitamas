@@ -17,11 +17,15 @@ double getPositiveDouble(string prompt);
 
 int main() {
     
-    cout << "Circle area in general: " + Circle::getAreaFormula() << endl;
-    cout << "Circle perimeter in general: " + Circle::getPerimeterFormula() << endl;
-    Circle c(3.2);
-    cout << c.toString() << endl;
+    ShapeCollection s{};
 
+    s.addCircle(Circle(3.0));
+    s.addCircle(Circle(5.0));
+    s.addRectangle(Rectangle(3, 4));
+    s.addRegularPentagon(RegularPentagon(5));
+
+    cout << s.getShapesTable() << endl;
+   
 
     // ShapeCollection shapeCollection{};
     // bool isRunning = true;
