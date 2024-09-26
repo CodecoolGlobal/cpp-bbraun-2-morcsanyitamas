@@ -17,21 +17,27 @@ double getPositiveDouble(string prompt);
 
 int main() {
     
-    ShapeCollection shapeCollection{};
-    bool isRunning = true;
+    cout << "Circle area in general: " + Circle::getAreaFormula() << endl;
+    cout << "Circle perimeter in general: " + Circle::getPerimeterFormula() << endl;
+    Circle c(3.2);
+    cout << c.toString() << endl;
 
-    while (isRunning) {
-        int option = 0;
-        cout << "What do you want to do?" << endl;
-        cout << "Add new shape (1)" << endl;
-        cout << "Show all shapes (2)" << endl;
-        cout << "Show shape with the largest perimeter (3)" << endl;
-        cout << "Show shape with the largest area (4)" << endl;
-        cout << "Quit (0)" << endl;
-        cin >> option;
 
-        // menu implementaion
-    }
+    // ShapeCollection shapeCollection{};
+    // bool isRunning = true;
+
+    // while (isRunning) {
+    //     int option = 0;
+    //     cout << "What do you want to do?" << endl;
+    //     cout << "Add new shape (1)" << endl;
+    //     cout << "Show all shapes (2)" << endl;
+    //     cout << "Show shape with the largest perimeter (3)" << endl;
+    //     cout << "Show shape with the largest area (4)" << endl;
+    //     cout << "Quit (0)" << endl;
+    //     cin >> option;
+
+    //     // menu implementaion
+    // }
 
     return 0;
 }
