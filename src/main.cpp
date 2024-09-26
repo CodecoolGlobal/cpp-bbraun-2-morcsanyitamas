@@ -72,7 +72,10 @@ void addNewShape(ShapeCollection& shapeCollection){
             case 1:
             {
                 double radius = getPositiveDouble("Radius: ");
-                shapeCollection.addCircle(Circle(radius));
+                Points circleCenter;
+                circleCenter.x = getPositiveDouble("Center x: ");
+                circleCenter.y = getPositiveDouble("Center y: ");
+                shapeCollection.addCircle(Circle(radius, circleCenter));
                 break;
             }
             case 2:
