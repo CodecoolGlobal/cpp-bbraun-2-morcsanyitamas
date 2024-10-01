@@ -3,22 +3,18 @@
 
 using namespace std;
 
-double Triangle::calculateArea() {
+double Triangle::calculateArea() const {
     return sqrt(semiPerimeter * (semiPerimeter - a) * (semiPerimeter - b) * (semiPerimeter - c));
 }
 
-double Triangle::calculatePerimeter() {
+double Triangle::calculatePerimeter() const {
     return a + b + c;
 }
 
-Triangle::Triangle(double a, double  b, double  c) {
-    Triangle::a = a;
-    Triangle::b = b;
-    Triangle::c = c;
-    semiPerimeter = 0.5 * calculatePerimeter();
+Triangle::Triangle(double a, double  b, double  c): a(a), b(b), c(c), semiPerimeter(0.5 * calculatePerimeter()) {
 }
 
-string Triangle::toString(){
+string Triangle::toString() const {
     return "Triangle, a = " + to_string(a) + ", b = " + to_string(b) + ", c = " + to_string(c);
 }
 

@@ -3,31 +3,31 @@
 
 using namespace std;
 
-void ShapeCollection::addCircle(Circle circle) {
+void ShapeCollection::addCircle(Circle const& circle) {
     circles.push_back(circle);
 }
 
-void ShapeCollection::addRectangle(Rectangle rectangle) {
+void ShapeCollection::addRectangle(Rectangle const& rectangle) {
     rectangles.push_back(rectangle);
 }
 
-void ShapeCollection::addTriangle(Triangle triangle) {
+void ShapeCollection::addTriangle(Triangle const& triangle) {
     triangles.push_back(triangle);
 }
 
-void ShapeCollection::addSquare(Square square) {
+void ShapeCollection::addSquare(Square const& square) {
     squares.push_back(square);
 }
 
-void ShapeCollection::addEquilateralTriangle(EquilateralTriangle equilateralTriangle) {
+void ShapeCollection::addEquilateralTriangle(EquilateralTriangle const& equilateralTriangle) {
     equilateralTriangles.push_back(equilateralTriangle);
 }
 
-void ShapeCollection::addRegularPentagon(RegularPentagon regularPentagon) {
+void ShapeCollection::addRegularPentagon(RegularPentagon const& regularPentagon) {
     regularPentagons.push_back(regularPentagon);
 }
 
-std::string ShapeCollection::getShapesTable() {
+std::string ShapeCollection::getShapesTable() const {
     string table = "";
 
     for (Circle circle: circles) {
@@ -57,7 +57,7 @@ std::string ShapeCollection::getShapesTable() {
     return table;
 }
 
-string ShapeCollection::getLargestShapeByArea(){
+string ShapeCollection::getLargestShapeByArea() const {
     double maxArea = 0;
     string maxAreaShape = "";
 
@@ -106,7 +106,7 @@ string ShapeCollection::getLargestShapeByArea(){
     return maxAreaShape;
 }
 
-string ShapeCollection::getLargestShapeByPerimeter(){
+string ShapeCollection::getLargestShapeByPerimeter() const{
     double maxPerimeter = 0;
     string maxPerimeterShape = "";
 

@@ -4,13 +4,13 @@
 
 class Circle {
 private:
-   double r;
-   Points center;
+   double const r;
+   Points const center;
 public:
-   double calculateArea();
-   double calculatePerimeter();
+   double calculateArea() const;
+   double calculatePerimeter() const;
    Circle(double radius, Points center);
-   std::string toString();
+   std::string toString() const;
    static std::string getPerimeterFormula();
    static std::string getAreaFormula();
 };

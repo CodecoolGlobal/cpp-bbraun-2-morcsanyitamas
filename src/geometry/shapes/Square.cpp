@@ -2,17 +2,17 @@
 
 using namespace std;
 
-double Square::calculateArea() {
+double Square::calculateArea() const {
     return a * a;
 }
 
-double Square::calculatePerimeter() {
+double Square::calculatePerimeter() const {
     return 4 * a;
 }
 
 Square::Square(double a): a(a) {}
 
-string Square::toString(){
+string Square::toString() const {
     return "Square, a = " + to_string(a);
 }
 

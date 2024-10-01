@@ -15,17 +15,14 @@ private:
    std::vector<Square> squares;
    std::vector<EquilateralTriangle> equilateralTriangles;
    std::vector<RegularPentagon> regularPentagons;
-
 public:
-   void addCircle(Circle circle);
-   void addRectangle(Rectangle rectangle);
-   void addTriangle(Triangle triangle);
-   void addSquare(Square square);
-   void addEquilateralTriangle(EquilateralTriangle equilateralTriangle);
-   void addRegularPentagon(RegularPentagon regularPentagon);
-
-   std::string getShapesTable();
-
-   std::string getLargestShapeByPerimeter();
-   std::string getLargestShapeByArea();
+   void addCircle(Circle const& circle);
+   void addRectangle(Rectangle const& rectangle);
+   void addTriangle(Triangle const& triangle);
+   void addSquare(Square const& square);
+   void addEquilateralTriangle(EquilateralTriangle const& equilateralTriangle);
+   void addRegularPentagon(RegularPentagon const& regularPentagon);
+   std::string getShapesTable() const;
+   std::string getLargestShapeByPerimeter() const;
+   std::string getLargestShapeByArea() const;
 };

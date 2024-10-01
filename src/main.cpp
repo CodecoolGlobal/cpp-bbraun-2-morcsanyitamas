@@ -71,43 +71,41 @@ void addNewShape(ShapeCollection& shapeCollection){
         switch (option) {
             case 1:
             {
-                double radius = getPositiveDouble("Radius: ");
-                Points circleCenter;
-                circleCenter.x = getPositiveDouble("Center x: ");
-                circleCenter.y = getPositiveDouble("Center y: ");
+                double const radius = getPositiveDouble("Radius: ");
+                Points const circleCenter{getPositiveDouble("Center x: "), getPositiveDouble("Center y: ")};
                 shapeCollection.addCircle(Circle(radius, circleCenter));
                 break;
             }
             case 2:
             {
-                double a = getPositiveDouble("Side a: ");
-                double b = getPositiveDouble("Side b: ");
+                double const a = getPositiveDouble("Side a: ");
+                double const b = getPositiveDouble("Side b: ");
                 shapeCollection.addRectangle(Rectangle(a, b));
                 break;
             }
             case 3:
             {
-                double a = getPositiveDouble("Side a: ");
-                double b = getPositiveDouble("Side b: ");
-                double c = getPositiveDouble("Side c: ");
+                double const a = getPositiveDouble("Side a: ");
+                double const b = getPositiveDouble("Side b: ");
+                double const c = getPositiveDouble("Side c: ");
                 shapeCollection.addTriangle(Triangle(a, b, c));
                 break;
             }
             case 4:
             {
-                double a = getPositiveDouble("Side a: ");
+                double const a = getPositiveDouble("Side a: ");
                 shapeCollection.addSquare(Square(a));
                 break;
             }
             case 5:
             {
-                double a = getPositiveDouble("Side a: ");
+                double const a = getPositiveDouble("Side a: ");
                 shapeCollection.addEquilateralTriangle(EquilateralTriangle(a));
                 break;
             }
             case 6:
             {
-                double a = getPositiveDouble("Side a: ");
+                double const a = getPositiveDouble("Side a: ");
                 shapeCollection.addRegularPentagon(RegularPentagon(a));
                 break;
             }

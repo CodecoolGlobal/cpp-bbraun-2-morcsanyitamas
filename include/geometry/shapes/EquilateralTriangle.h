@@ -3,13 +3,13 @@
 
 class EquilateralTriangle {
 private:
-   double a;
+   double const a;
 
 public:
-   double calculateArea();
-   double calculatePerimeter();
+   double calculateArea() const;
+   double calculatePerimeter() const;
    EquilateralTriangle(double a);
-   std::string toString();
+   std::string toString() const;
    static std::string getPerimeterFormula();
    static std::string getAreaFormula();
 };

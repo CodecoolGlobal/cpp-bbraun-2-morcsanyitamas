@@ -6,15 +6,15 @@ using namespace std;
 
 Circle::Circle(double radius, Points center): r(radius), center(center) {}
 
-double Circle::calculateArea() {
+double Circle::calculateArea() const {
     return M_PI * r * r;
 }
 
-double Circle::calculatePerimeter() {
+double Circle::calculatePerimeter() const {
     return 2 * M_PI * r;
 }
 
-string Circle::toString(){
+string Circle::toString() const {
     return "Circle, r = " + to_string(r) + " center x: " + to_string(center.x) + " center y: " + to_string(center.y);
 }
 

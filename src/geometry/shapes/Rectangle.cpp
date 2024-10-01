@@ -2,17 +2,17 @@
 
 using namespace std;
 
-double Rectangle::calculateArea() {
+double Rectangle::calculateArea() const {
     return a * b;
 }
 
-double Rectangle::calculatePerimeter() {
+double Rectangle::calculatePerimeter() const {
     return 2 * a + 2 * b;
 }
 
 Rectangle::Rectangle(double a, double b): a(a), b(b) {}
 
-string Rectangle::toString(){
+string Rectangle::toString() const {
     return "Rectangle, a = " + to_string(a) + " ,b = " + to_string(b);
 }
 

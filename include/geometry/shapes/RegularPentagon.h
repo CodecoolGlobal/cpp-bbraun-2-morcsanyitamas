@@ -3,13 +3,12 @@
 
 class RegularPentagon {
 private:
-   double a;
-
+   double const a;
 public:
-   double calculateArea();
-   double calculatePerimeter();
+   double calculateArea() const;
+   double calculatePerimeter() const;
    RegularPentagon(double a);
-   std::string toString();
+   std::string toString() const;
    static std::string getPerimeterFormula();
    static std::string getAreaFormula();
 };
